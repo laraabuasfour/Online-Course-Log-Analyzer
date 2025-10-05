@@ -1,0 +1,93 @@
+Test Cases – Online Course Log Analyzer
+
+(1) Number of sessions per course
+Input:
+1
+ENCS101
+Expected: Sessions in ENCS101: 2
+
+Input:
+1
+ENCS102
+Expected: Sessions in ENCS102: 2
+
+(2) Average attendance per course
+Input:
+2
+ENCS101
+Expected: Average attendance in ENCS101: 3.00
+
+Input:
+2
+ENCS102
+Expected: Average attendance in ENCS102: 3.00
+
+(3) Absent students per course
+Input:
+3
+ENCS101
+Expected:
+Absent students in ENCS101:
+StudentID,FirstName,LastName
+1004,Maya,Salem
+
+Input:
+3
+ENCS102
+Expected:
+Absent students in ENCS102:
+StudentID,FirstName,LastName
+1013,Kareem,Awad
+
+(4) Late arrivals in a session
+Input:
+4
+ENCS101
+S1
+10
+Expected:
+Late arrivals (>= 10 min) in ENCS101 / S1:
+StudentID,FirstName,LastName,DelayMinutes
+1002,Woroud,Hamayel,12
+
+(5) Early leavers in a session
+Input:
+5
+ENCS101
+S1
+10
+Expected:
+Early leavers (>= 10 min) in ENCS101 / S1:
+StudentID,FirstName,LastName,EarlyLeaveMinutes
+1002,Woroud,Hamayel,20
+
+(6) Avg attendance time per student (course)
+Input:
+6
+ENCS101
+Expected:
+Avg attendance time per student (attended sessions only):
+StudentID,Name,SessionsAttended,TotalMinutes,AvgMinutes(AttendedOnly),TotalSessionsInCourse
+1001,Lara Asfour,2,132,66.00,2
+1002,Woroud Hamayel,2,83,41.50,2
+1003,Sara Khalil,2,152,76.00,2
+
+(7) Avg attendance per instructor
+Input:
+7
+Expected:
+Average attendance per instructor:
+InstructorID,AvgAttendanceAcrossSessions
+9001,3.00
+9010,3.00
+
+(8) Most-used tool (by distinct sessions)
+Input:
+8
+Expected:
+Most-used tool (by distinct sessions):
+Tool,DistinctSessions
+Teams,2
+Zoom,2
+
+Most used tool by distinct sessions: Tie (Teams, Zoom with 2)
